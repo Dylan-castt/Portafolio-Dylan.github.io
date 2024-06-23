@@ -144,16 +144,37 @@
 					cuanto a maquinas y a tecnicos. Cuando yo tomé el proyecto ya se habia hecho
 					un entregable, sin embargo, me di cuenta que tenia muchas areas de mejora. 
 					El resultado se convirtio en algo muy util para los dueños del proceso y a 
-					continuacion muestro el proceso paso a paso.
-				</p>
+					continuacion muestro el proceso de forma general. 
 				<p>
-				para calcular la capacidad de tecnicos, lo primero fue obtener los horarios 
-				reales de cada una de las personas (esto lo sabemos gracias a que se registra 
-				el marcaje de entrada y de salida) 
-				
+					Para calcular la capacidad de tecnicos, lo primero fue obtener los horarios 
+					reales de cada una de las personas (esto lo sabemos gracias a que se registra 
+					el marcaje de entrada y de salida). Por siguiente se tiene obtener la demanda, 
+					esto atraves del sistema que usamos para tratar los datos (denominado DIVER).
+					Una vez que se tiene esa informacion, cree una formula que ocupa el horario de 
+					inicio y fin para separarlo por hora y asi saber con cuanto tiempo contamos en 
+					cada una de las horas (se usan horas de inicio y fin ya que hay personas en el 
+					turno de velada y necesitamos seccionar las horas para asiganrlo al dia que 
+					corresponde o un dia siguiente) y se dividieron los tecnicos en 7 grupos 
+					dependiendo de que especialidades podian manejar.
 				</p>	
-				<center><img src="images/BanBen.jpg" width="800" height="350" alt="" /></span></center>
+				<figure><center><img src="images/plantillaydem.jpg" width="1000" height="450" alt="" /></span>
+				<figcaption> <p style="front-family:'Times New Roman',serif;"> La imagen tiene blur 
+					para mantener la confidencialidad de los datos</figcaption>
+				</p></center></figure>
+				<p style="front-family:'Times New Roman',serif;">
+					Despues se procedio a acomodar los datos ya que se iban a ingresar a solver para 
+					minimizar el tiempo de sobredemanda que se tiene con cada hora, teniendo la 
+					restriccion de que sea igual o mayor a 0. Se tuvieron que minimizar 168 filas 
+					para que el resultado sea el mas optimo posible. Despues de minimizar la suma de 
+					las sobredemandas de cada una de las especialidad. Por siguiente debemos reacomodar 
+					los datos que nos arrojo solver a nuestro formato y asi logre simular el tiempo 
+					usado por los tecnicos para la demanda y en que casos no se dieron a basto.
+				</p>
+				<figure><center><img src="images/Solver.jpg" width="1000" height="350" alt="" /></span>
 
+				<figure><center><img src="images/Sobredemanda.jpg" width="1000" height="350" alt="" /></span>
+				<figcaption> <p style="front-family:'Times New Roman',serif;"> La imagen tiene blur 
+					para mantener la confidencialidad de los datos</figcaption>
 				<p></p>
 
 			</article>
